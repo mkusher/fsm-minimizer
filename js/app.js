@@ -17,7 +17,9 @@ angular.module('app', [
     .controller('NavCtrl', function NavCtrl(){
     })
     .controller('MealyCtrl', function MealyCtrl(){
-
+        this.numberOfA = 1;
+        this.numberOfZ = 1;
+        this.numberOfW = 1;
     })
     .controller('MooreCtrl', function MooreCtrl(){
 
