@@ -20,13 +20,14 @@
             <td ng-bind="z"></td>
             <td ng-repeat="a in mealy.a" class="row">
                 <div class="col-xs-5">
-                    <input type="text" class="form-control" placeholder="A" ng-model="mealy.transition[z][a]" typeahead="a for a in mealy.a" />
+                    <input type="text" class="form-control" placeholder="A" ng-model="mealy.transition[z][a]" typeahead="a for a in mealy.variants(mealy.a)" />
                 </div>
                 <div class="col-xs-2"><span>/</span></div>
                 <div class="col-xs-5">
-                    <input type="text" class="form-control" placeholder="W" ng-model="mealy.output[z][a]" typeahead="w for w in mealy.w" />
+                    <input type="text" class="form-control" placeholder="W" ng-model="mealy.output[z][a]" typeahead="w for w in mealy.variants(mealy.w)" />
                 </div>
             </td>
         </tr>
     </table>
+    <button ng-click="minimize()" class="btn btn-primary btn-lg">Minimize</button>
 </div>

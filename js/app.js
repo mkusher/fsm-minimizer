@@ -36,6 +36,12 @@ angular.module('app', [
         this.$watchNumbers(function(){ return ctrl.numberOfA}, ctrl.a, 'a');
         this.$watchNumbers(function(){ return ctrl.numberOfZ}, ctrl.z, 'z');
         this.$watchNumbers(function(){ return ctrl.numberOfW}, ctrl.w, 'w');
+        this.variants = function Variants(arr){
+            return ['-'].concat(arr);
+        };
+        this.minimize = function Minimize(){
+
+        };
     })
     .controller('MooreCtrl', function MooreCtrl(){
 
